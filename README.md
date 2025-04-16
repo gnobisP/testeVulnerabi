@@ -180,3 +180,4 @@ Contém os dados do arquivo.zip que foi realizado a quebra da senha.
 
 
 **`index.html`**: Código refatorado para eliminar o problema de vazamento de dados.
+**`READMD.md`**: Explicação da soluação do desafio.
