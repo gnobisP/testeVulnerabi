@@ -33,10 +33,10 @@ A primeira tentativa foi realizar combinações simples entre letras maiusculas,
 
 |                     | Número | Minúsculo | Maiúsculo | Especial |
 |---------------------|:------:|:---------:|:---------:|:--------:|
-| **Número**          |   8    |     5     |     5     |    6     |
+| **Número**          |   8    |     5     |     5     |**->6**    |
 | **Minúsculo**       |   5    |     6     |     5     |    5     |
 | **Maiúsculo**       |   5    |     5     |     6     |    5     |
-| **Especial**        |   6    |     5     |     5     |**-> 6**        |
+| **Especial**        |   6    |     5     |     5     |6       |
 
 Foram realizadas todas combinações possíveis dada a complexidade de tempo, como por exemplo, utilizando digitos númericos, caracteres especiais e letras minúsculas, porém não surtiu efeito.
 
