@@ -131,7 +131,7 @@ para
 A solução, inicialmente, se mostrou eficiente. O usuário fica impossibilitado de escrever texto, assim impossibilitando de enviar scripts. Porém, o usuário pode alterar as regras do html assim modificando para que seja aceito texto novamente.
 
 > ❌ Tentativa falhou.
-#### 2ª Solução Testada: Usar `ewEntry.textContent = entry;`
+#### 2ª Solução Testada: Usar `newEntry.textContent = entry;`
 
 A segunda solução encontrada foi substituir:
 ```sh
@@ -141,7 +141,7 @@ por
 ```sh
 newEntry.textContent = entry;
 ```
-Isso evita que scripts sejam rodados. No meu pensamento o problema do item anterior iria permanecer, ou seja, o usuário poderia alterar o código html para voltar para a  variavel.innerHTML. Porém, pelos testes realizados, foi resolvido.
+Isso evita que scripts sejam rodados. No meu pensamento o problema do item anterior iria permanecer, ou seja, o usuário poderia alterar o código html para voltar para `newEntry.innerHTML = entry;`. Porém, pelos testes realizados, foi resolvido.
 
 > ✅ Falha resolvida.
 
@@ -152,7 +152,7 @@ Você se deparou com esse código em um dos times que está auxiliando, aqui na 
 Como explirar para eles o que está acontecendo e como o código poderia ser mais seguro?
 ```
 #### Explicando o problema
-```sh
+
 
 Identificamos uma falha de segurança do tipo Cross-Site Scripting (XSS), que permite que um usuário mal-intencionado injete código JavaScript por meio dos campos de entrada.
 
@@ -165,4 +165,3 @@ Se não, vamos para o próximo passo, que seria procurar no restante dos nosso c
 Um próximo passo futuro, será analisar possíveis vazamentos que ocorreram quando essa vulnerabilidade estava ativa.
 
 Não se preoucupem, irei orientar vocês nesse primeiro momento de como podemos fazer isso
-```
