@@ -165,3 +165,18 @@ Se não, vamos para o próximo passo, que seria procurar no restante dos nosso c
 Um próximo passo futuro, será analisar possíveis vazamentos que ocorreram quando essa vulnerabilidade estava ativa.
 
 Não se preoucupem, irei orientar vocês nesse primeiro momento de como podemos fazer isso
+
+## 📁 Estrutura do Projeto
+
+#### 📂 `bruteForce`
+Contém os arquivos responsáveis por gerar os dicionário da primeira parte do desafio.`2. Força Bruta com Dicionário Personalizado`
+- **`gerador.py`**: Gera somente padrões com números
+- **`readme.py`**: Gera padrões com números, letras e símbolos
+
+#### 📂 `desafio`
+Contém os dados do arquivo.zip que foi realizado a quebra da senha.
+- **`index.html`**: Código original com a falha
+- **`readme.txt`**: enunciado segunda parte desafio
+
+
+**`index.html`**: Código refatorado para eliminar o problema de vazamento de dados.
