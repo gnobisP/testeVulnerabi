@@ -126,9 +126,9 @@ Substituir os campos de:
 ```
 para
 ```sh
-<input type="number" id="num1" placeholder="Número 1" required>
+<input type="number" id="num2" placeholder="Número 1" required>
 ```
-A solução, inicialmente, se mostrou eficiente. O usuário fica impossibilitado de escrever texto, assim impossibilitando de enviar scripts. Porém o usuário pode alterar as regras do html assim modificando para que seja aceito texto novamente.
+A solução, inicialmente, se mostrou eficiente. O usuário fica impossibilitado de escrever texto, assim impossibilitando de enviar scripts. Porém, o usuário pode alterar as regras do html assim modificando para que seja aceito texto novamente.
 
 > ❌ Tentativa falhou.
 #### 2ª Solução Testada: Usar `ewEntry.textContent = entry;`
@@ -145,6 +145,24 @@ Isso evita que scripts sejam rodados. No meu pensamento o problema do item anter
 
 > ✅ Falha resolvida.
 
-document.cookie = "flag=XSS_FLAG_YOU_DID_IT; HttpOnly; Secure"; // Adicionar flags de segurança
+## 🧩 Etapa 4 - Explicando a falha
+Considerando o seguinte enunciado:
+```sh
+Você se deparou com esse código em um dos times que está auxiliando, aqui na dti. E agora? Qual seria sua abordagem para apoiar o time?
+Como explirar para eles o que está acontecendo e como o código poderia ser mais seguro?
+```
+#### Explicando o problema
+```sh
 
+Identificamos uma falha de segurança do tipo Cross-Site Scripting (XSS), que permite que um usuário mal-intencionado injete código JavaScript por meio dos campos de entrada.
 
+É como deixar a porta do nosso escritório aberta. Qualquer pessoa pode entrar, usar os computadores e sair sem ser notada. Tudo parece funcionar normalmente, mas se alguém com más intenções aproveitar essa brecha, poderá causar danos irreparáveis em nossos sistemas.
+
+A solução que eu encontrei foi o uso de ".innerHTML" por ".textContent" para neutralizar a execução de código malicioso. Alguém tem sugestões ou alternativas para discutirmos?
+
+Se não, vamos para o próximo passo, que seria procurar no restante dos nosso códigos que usamos .innerHTML indevidamente. Encontrando esse erros, vamos refatorar o código de maneira adequada.
+
+Um próximo passo futuro, será analisar possíveis vazamentos que ocorreram quando essa vulnerabilidade estava ativa.
+
+Não se preoucupem, irei orientar vocês nesse primeiro momento de como podemos fazer isso
+```

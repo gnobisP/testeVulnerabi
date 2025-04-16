@@ -6,7 +6,7 @@ digits0= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*
 digits = '0123456789'
 # Define os limites do número de dígitos antes/depois de "DTI"
 min_digits = 0
-
+max_digits = 4
 # Arquivo de saída
 
 with open("senhas_dti_numeros.txt", "w") as f:
